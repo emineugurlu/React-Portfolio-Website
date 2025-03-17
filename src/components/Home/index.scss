@@ -1,0 +1,31 @@
+.home-page{
+    .text-zone{
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        max-height: 90%;
+    }
+
+    h1{
+        color:#fff ;
+        font-size: 53px;
+        margin: 0;
+        font-family:'Coolvetica' ;
+        font-weight: 400;
+
+        &::before{
+            content: '<h1>';
+            font-family: 'La Bella Aurore';
+            color: #ffd700;
+            font-size: 18px;
+            position: absolute;
+        }
+
+
+        img{
+            width: 40px;
+           
+        }
+    }
+}

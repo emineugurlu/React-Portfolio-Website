@@ -10,6 +10,8 @@
     .logo{
         display:block;
         padding: 8px 0;
+        
+      
 
     img{
         display: block;
@@ -19,7 +21,8 @@
 
         &.sub-logo{
             width: 60px;
-            margin-top: -35px;
+            margin-top: -25px;
+            padding-left: 6px;
         }
     }
 }
@@ -93,6 +96,31 @@ nav {
 
     a.active{
         svg{
+            color: #ffd700;
+        }
+    }
+}
+
+
+ul{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: block;
+    padding: 0;
+    list-style:none;
+    text-align: center;
+    margin: 0; 
+}
+
+li{
+    a{
+        padding: 7px;
+        display: block;
+        font-size: 15px;
+        line-height: 16px;
+
+        &:hover svg{
             color: #ffd700;
         }
     }
