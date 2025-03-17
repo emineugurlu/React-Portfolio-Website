@@ -1,0 +1,26 @@
+.text-animate {
+    display: inline-block;  // Harflerin yatayda düzgün dizilmesini sağlar
+    opacity: 0;
+    animation: bounceIn 1s ease-out forwards;
+    font-size: 48px; // Yazı büyüklüğünü sen belirleyebilirsin
+    white-space: pre; // Boşlukları koruyarak harflerin üst üste binmesini engeller
+    line-height: 1.2; // Satır yüksekliğini düzenler
+    margin-right: 2px; // Harfler arasında boşluk bırakır
+}
+
+.text-animate-hover{
+    min-width: 10px;
+    display: inline-block;
+    animation-fill-mode: both;
+
+    &:hover{
+        animation: rubberBand 1s;
+        color: #ffd700;
+    }
+}
+
+@for $i from 1 through 35 {
+    .text-animate._#{$i} {
+        animation-delay: #{$i / 10}s; // DOĞRU!
+    }
+}

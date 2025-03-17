@@ -16,16 +16,78 @@
 
         &::before{
             content: '<h1>';
-            font-family: 'La Bella Aurore';
+            font-family:'La Belle Aurore',cursive;
             color: #ffd700;
             font-size: 18px;
             position: absolute;
+            margin-top: -40px;
+            left:15px ;
+            opacity: 0.6;
+        }
+
+        &::after{
+            content:'<h1/>' ;
+            font-family: 'La Belle Aurore',cursive;
+            color: #ffd700;
+            font-size:18px ;
+            position: absolute;
+            margin-top: 18px;
+            margin-left: 20px;
+            animation: fadeIn 1s 1.7s backwards;
+            opacity: 0.6;
+
         }
 
 
-        img{
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px) scale(0.8) rotate(-10deg);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1) rotate(0deg);
+            }
+        }
+        
+        img {
             width: 40px;
-           
+            height: auto;
+            margin-left: 20px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out both;
+            animation-delay: 1.4s;
+        }
+    }
+
+    h2{
+        color: #8d8d8d;
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 11px;
+        font-family: sans-serif;
+        letter-spacing: 3px;
+        animation: fadeIn 1s 1.8s backwards  ;
+    }
+
+    .flat-button{
+        color: #ffd700;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 4px ;
+        font-family: sans-serif;
+        text-decoration: none;
+        padding:10px 10px ;
+        border: 1px  solid #ffd700;
+        margin-top: 25px;
+        float: left;
+        animation: fadeInAnimation 1s 1.8 ease ;
+        white-space: nowrap;
+
+        &:hover{
+            background:#ffd700;
+            color: #333;
+            
         }
     }
 }
