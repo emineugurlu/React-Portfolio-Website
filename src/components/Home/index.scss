@@ -1,5 +1,8 @@
-.home-page{
-    .text-zone{
+.home-page {
+    position: relative;
+    height: 100vh;  // Yüksekliği tüm ekran boyutuna göre ayarlıyoruz
+
+    .text-zone {
         position: absolute;
         left: 10%;
         top: 50%;
@@ -7,37 +10,36 @@
         max-height: 90%;
     }
 
-    h1{
-        color:#fff ;
+    h1 {
+        color: #fff;
         font-size: 53px;
         margin: 0;
-        font-family:'Coolvetica' ;
+        font-family: 'Coolvetica';
         font-weight: 400;
+        position: relative;
 
-        &::before{
+        &::before {
             content: '<h1>';
-            font-family:'La Belle Aurore',cursive;
+            font-family: 'La Belle Aurore', cursive;
             color: #ffd700;
             font-size: 18px;
             position: absolute;
             margin-top: -40px;
-            left:15px ;
+            left: 15px;
             opacity: 0.6;
         }
 
-        &::after{
-            content:'<h1/>' ;
-            font-family: 'La Belle Aurore',cursive;
+        &::after {
+            content: '<h1/>';
+            font-family: 'La Belle Aurore', cursive;
             color: #ffd700;
-            font-size:18px ;
+            font-size: 18px;
             position: absolute;
             margin-top: 18px;
             margin-left: 20px;
             animation: fadeIn 1s 1.7s backwards;
             opacity: 0.6;
-
         }
-
 
         @keyframes fadeInUp {
             0% {
@@ -49,7 +51,7 @@
                 transform: translateY(0) scale(1) rotate(0deg);
             }
         }
-        
+
         img {
             width: 40px;
             height: auto;
@@ -60,34 +62,34 @@
         }
     }
 
-    h2{
+    h2 {
         color: #8d8d8d;
         margin-top: 20px;
         font-weight: 400;
         font-size: 11px;
         font-family: sans-serif;
         letter-spacing: 3px;
-        animation: fadeIn 1s 1.8s backwards  ;
+        animation: fadeIn 1s 1.8s backwards;
     }
 
-    .flat-button{
+    .flat-button {
         color: #ffd700;
         font-size: 13px;
         font-weight: 400;
-        letter-spacing: 4px ;
+        letter-spacing: 4px;
         font-family: sans-serif;
         text-decoration: none;
-        padding:10px 10px ;
-        border: 1px  solid #ffd700;
+        padding: 10px 10px;
+        border: 1px solid #ffd700;
         margin-top: 25px;
         float: left;
-        animation: fadeInAnimation 1s 1.8 ease ;
+        animation: fadeInAnimation 1s 1.8s ease;
         white-space: nowrap;
+        transition: background-color 0.3s ease, color 0.3s ease;
 
-        &:hover{
-            background:#ffd700;
+        &:hover {
+            background: #ffd700;
             color: #333;
-            
         }
     }
 }

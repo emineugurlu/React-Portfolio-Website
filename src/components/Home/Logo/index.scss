@@ -1,36 +1,114 @@
-.logo-container {
-    z-index : 0;
-    width: 400px;
-    height: 609px;
+/* Banner genel stili */
+.banner {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Ortada yerleştir */
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Slider kısmı */
+.banner .slider {
     position: absolute;
-    top: 0;
-    right: 15%;
-    bottom: 0;
-    left: auto;
-    margin: auto;
+    width: 150px;
+    height: 150px;
+    top: 35%;
+    left: 65%; /* Burada slider'ı sağa kaydırıyoruz */
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 15s linear infinite;
+    z-index: 2;
+}
 
-    svg{
-        width: 100%;
-        height: auto;
-        bottom: 0;
-        transform: rotateZ(30deg) !important;
+/* Dönme animasyonu */
+@keyframes autoRun {
+    0% {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
     }
-
-    .solid-logo{
-        position: absolute;
-        top: auto;
-        right: auto;
-        bottom: auto;
-        left: 0;
-        margin: auto;
-        width: 100%;
-        
-        transform: rotateZ(30deg);
-        z-index: 1;
+    100% {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg); /* Daire şeklinde döner */
     }
 }
 
-.svg-container{
-    stroke: #ffd700;
-    stroke-width:10px;
+/* Görsellerin düzeni */
+.banner .slider .item {
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(150px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+/* Görsellerin boyutu ve düzeni */
+.banner .slider .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* İçerik kısmı (alt yazılar ve açıklamalar) */
+.banner .content {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+/* Görsel animasyonu */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobil ve tablet ekranlar için */
+@media screen and (max-width: 1023px) {
+    .banner .slider {
+        width: 180px;
+        height: 180px;
+        left: 70%; /* Mobilde sağa kaydırma */
+    }
+
+    .banner .slider .item {
+        transform: 
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(250px);
+    }
+}
+
+/* Mobil ekranlar için slider boyutunu küçültüyoruz */
+@media screen and (max-width: 767px) {
+    .banner .slider {
+        width: 120px;
+        height: 120px;
+        left: 70%; /* Mobilde de sağa kaydırma */
+    }
+
+    .banner .slider .item {
+        transform: 
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(150px);
+    }
 }
