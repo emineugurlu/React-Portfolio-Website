@@ -1,6 +1,6 @@
 .home-page {
     position: relative;
-    height: 100vh;  // Yüksekliği tüm ekran boyutuna göre ayarlıyoruz
+    height: 100vh; // Yüksekliği tüm ekran boyutuna göre ayarlıyoruz
 
     .text-zone {
         position: absolute;
@@ -39,17 +39,6 @@
             margin-left: 20px;
             animation: fadeIn 1s 1.7s backwards;
             opacity: 0.6;
-        }
-
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(20px) scale(0.8) rotate(-10deg);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0) scale(1) rotate(0deg);
-            }
         }
 
         img {
@@ -92,4 +81,52 @@
             color: #333;
         }
     }
+}
+
+/* ========== ANİMASYONLAR ========== */
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.8) rotate(-10deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ========== ANİMASYONLU HARFLER ========== */
+.text-animate {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+    animation-delay: calc(0.05s * var(--animation-order));
+}
+
+.text-animate-hover {
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+.text-animate-hover:hover {
+    color: #ffd700;
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Ek olarak `letter` sınıfı ekleyelim */
+.letter {
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
 }

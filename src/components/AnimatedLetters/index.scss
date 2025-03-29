@@ -1,5 +1,6 @@
+// Harf animasyonu için temel stil
 .text-animate {
-    display: inline-block;  // Harflerin yatayda düzgün dizilmesini sağlar
+    display: inline-block; // Harflerin yatayda düzgün dizilmesini sağlar
     opacity: 0;
     animation: bounceIn 1s ease-out forwards;
     font-size: 48px; // Yazı büyüklüğünü sen belirleyebilirsin
@@ -8,19 +9,62 @@
     margin-right: 2px; // Harfler arasında boşluk bırakır
 }
 
-.text-animate-hover{
+// Hover durumu
+.text-animate-hover {
     min-width: 10px;
     display: inline-block;
     animation-fill-mode: both;
 
-    &:hover{
+    &:hover {
         animation: rubberBand 1s;
         color: #ffd700;
     }
 }
 
+// Her harfe farklı delay eklemek için döngü
 @for $i from 1 through 35 {
     .text-animate._#{$i} {
-        animation-delay: #{$i / 10}s; // DOĞRU!
+        animation-delay: #{$i / 10}s; // Harf animasyonlarının sırayla başlamasını sağlar
+    }
+}
+
+// bounceIn animasyonunun tanımlaması
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+// rubberBand animasyonunun tanımlaması
+@keyframes rubberBand {
+    0% {
+        transform: scaleX(1);
+    }
+    30% {
+        transform: scaleX(1.25) scaleY(0.75);
+    }
+    40% {
+        transform: scaleX(0.75) scaleY(1.25);
+    }
+    50% {
+        transform: scaleX(1.15) scaleY(0.85);
+    }
+    65% {
+        transform: scaleX(0.95) scaleY(1.05);
+    }
+    75% {
+        transform: scaleX(1.05) scaleY(0.95);
+    }
+    100% {
+        transform: scaleX(1);
     }
 }

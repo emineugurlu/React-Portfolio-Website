@@ -1,24 +1,15 @@
-import './index.scss'
+import './index.scss';
 
-const AnimatedLetters = ({letterClass, strArray,idx}) =>{
-    return(
+const AnimatedLetters = ({ letterClass, strArray, idx = 0 }) => {
+    return (
         <span>
-            {
-               strArray.map((char,i) =>(
-                <span key={char +i} className={`${letterClass} _${i + idx}`}>
+            {strArray.map((char, i) => (
+                <span key={i} className={`${letterClass} _${i + idx}`}>
                     {char}
-                    
-                    
                 </span>
-
-               
-            
-               ))
-            }
+            ))}
         </span>
-    )
-        
-    
+    );
 };
 
-export default AnimatedLetters
+export default AnimatedLetters;
