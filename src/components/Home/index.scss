@@ -72,13 +72,14 @@
         border: 1px solid #ffd700;
         margin-top: 25px;
         float: left;
-        animation: fadeInAnimation 1s 1.8s ease;
+        animation: fadeIn 1s 1.8s ease;
         white-space: nowrap;
-        transition: background-color 0.3s ease, color 0.3s ease;
-
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    
         &:hover {
             background: #ffd700;
             color: #333;
+            transform: scale(1.1);  /* Butonun hoverda büyümesini sağlıyoruz */
         }
     }
 }
@@ -103,30 +104,4 @@
     to {
         opacity: 1;
     }
-}
-
-/* ========== ANİMASYONLU HARFLER ========== */
-.text-animate {
-    display: inline-block;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease-in-out forwards;
-    animation-delay: calc(0.05s * var(--animation-order));
-}
-
-.text-animate-hover {
-    display: inline-block;
-    transition: all 0.3s ease-in-out;
-}
-
-.text-animate-hover:hover {
-    color: #ffd700;
-    transform: scale(1.2);
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-/* Ek olarak `letter` sınıfı ekleyelim */
-.letter {
-    display: inline-block;
-    transition: all 0.3s ease-in-out;
 }
