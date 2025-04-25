@@ -16,6 +16,11 @@ This project is a professional portfolio website built to present my skills, pro
 - JavaScript
 - React.js
 
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
 ## ⚙️ Installation
 
 To run this project locally:
@@ -32,6 +37,8 @@ npm start
 📱 Medium: https://medium.com/@emineugurlu957
 📱 Linkendin: https://www.linkedin.com/in/emine-ugurlu
 📱 Instagram : https://www.instagram.com/emine__ugurlu__/
+
+
 
 
 ![Ekran görüntüsü 2025-04-25 162612](https://github.com/user-attachments/assets/883fb76b-fbea-47c9-9f2a-ec9b703406f0)
