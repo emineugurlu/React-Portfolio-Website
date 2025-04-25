@@ -26,7 +26,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 To run this project locally:
 
 
-git clone https://github.com/your-username/your-project-name.git
+git clone https://github.com/your-username/React-Portfolio-Website.git
 cd your-project-name
 npm install
 npm start
