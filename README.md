@@ -33,10 +33,9 @@ npm start
 📱 Linkendin: https://www.linkedin.com/in/emine-ugurlu
 📱 Instagram : https://www.instagram.com/emine__ugurlu__/
 
-![Ekran görüntüsü 2025-04-25 162612](https://github.com/user-attachments/assets/e329428c-6ac4-47ef-8ca7-2f8da2bdbf14)
 
-![Ekran görüntüsü 2025-04-25 162630](https://github.com/user-attachments/assets/97344d7d-1e93-49f8-a210-cc564102ae95)
+![Ekran görüntüsü 2025-04-25 162612](https://github.com/user-attachments/assets/883fb76b-fbea-47c9-9f2a-ec9b703406f0)
 
-![Ekran görüntüsü 2025-04-25 162642](https://github.com/user-attachments/assets/3be25e25-93eb-4714-a12a-1b9088ed481d)
+![Ekran görüntüsü 2025-04-25 162630](https://github.com/user-attachments/assets/b2f0c8dd-9ef9-47da-bd9b-d52713e16516)
 
-
+![Ekran görüntüsü 2025-04-25 162642](https://github.com/user-attachments/assets/588828fb-6160-42da-9a91-5bb9c0bb5d4a)
