@@ -48,7 +48,7 @@ This React application focuses on **Scalability & Modern Frontend Standards**:
 
 2. **Install Dependencies:**
   ````bash 
-   npm install
+      npm install
 ````
 3. **Launch Project:**
    ````bash
