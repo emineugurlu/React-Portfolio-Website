@@ -47,8 +47,8 @@ This React application focuses on **Scalability & Modern Frontend Standards**:
    git clone [https://github.com/emineugurlu/React-Portfolio-Website.git](https://github.com/emineugurlu/React-Portfolio-Website.git)
 
 2. **Install Dependencies:**
-  ````bash 
-   npm install
+  ````bash
+npm install
   ````
 3. **Launch Project:**
    ````bash
